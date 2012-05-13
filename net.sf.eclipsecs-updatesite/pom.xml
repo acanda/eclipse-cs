@@ -1,0 +1,37 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>net.sf.eclipsecs.parent</artifactId>
+        <groupId>net.sf.eclipsecs</groupId>
+        <version>5.5.1-SNAPSHOT</version>
+        <relativePath>../net.sf.eclipsecs.parent</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>net.sf.eclipsecs</groupId>
+    <artifactId>net.sf.eclipsecs-updatesite</artifactId>
+    <version>5.5.1-SNAPSHOT</version>
+    <packaging>eclipse-update-site</packaging>
+    <name>eclipse-cs Update Site</name>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <descriptors>
+                        <descriptor>update-site-assembly.xml</descriptor>
+                    </descriptors>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
